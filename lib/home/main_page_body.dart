@@ -1,5 +1,11 @@
+import 'dart:js';
+import 'dart:js';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:kp_android/utils/dimensions.dart';
 
 class MainPageBody extends StatefulWidget {
   const MainPageBody({super.key});
@@ -14,23 +20,23 @@ class _MainPageBodyState extends State<MainPageBody> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(top: 25, bottom: 15, left: 20, right: 20),
+          margin: EdgeInsets.only(bottom: 15, left: 20, right: 20),
         ),
         ListView.builder(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: 10,
+              itemCount: 30,
               itemBuilder: (context, index) {
                 // рамка персонажа
                 return Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.grey.shade200,
-                      border: Border.all(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.grey.shade200,
+                    border: Border.all(
                         width: 1.0,
                         style: BorderStyle.solid,
                         color: Colors.grey.shade400,
-                      )
+                    )
                   ),
                   margin: EdgeInsets.only(left: 20, right: 20, bottom: 20),
                   child: Row(
@@ -43,13 +49,13 @@ class _MainPageBodyState extends State<MainPageBody> {
                         height: 100,
                         margin: EdgeInsets.only(left: 10, right: 5, top: 10, bottom: 10),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.red,
-                          // image: DecorationImage(
-                          //     image: AssetImage(
-                          //         "assets/images/person.png"
-                          //     )
-                          // )
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red,
+                            // image: DecorationImage(
+                            //     image: AssetImage(
+                            //         "assets/images/person.png"
+                            //     )
+                            // )
                         ),
                         child: Icon(Icons.person_outline_outlined, color: Colors.white, size: 70,),
                       ),
@@ -65,8 +71,8 @@ class _MainPageBodyState extends State<MainPageBody> {
                                   "Макота Шин",
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
                                   ),
                                 ),
                                 // Специализация
@@ -87,8 +93,8 @@ class _MainPageBodyState extends State<MainPageBody> {
                                     Text(
                                       "40/50",
                                       style: TextStyle(
-                                          fontSize: 16,
-                                          color: Colors.green.shade900
+                                        fontSize: 16,
+                                        color: Colors.green.shade900
                                       ),
                                     ),
                                   ],
@@ -103,8 +109,8 @@ class _MainPageBodyState extends State<MainPageBody> {
                                     Text(
                                       "15",
                                       style: TextStyle(
-                                        fontSize: 16,
-                                        // color: Colors.green.shade800
+                                          fontSize: 16,
+                                          // color: Colors.green.shade800
                                       ),
                                     ),
                                   ],
@@ -113,14 +119,15 @@ class _MainPageBodyState extends State<MainPageBody> {
                             ),
                           )
                       ),
-                      Container(
-                        padding: EdgeInsets.only(top: 2, right: 8),
-                        child: Icon(Icons.keyboard_control_rounded, size: 35, color: Colors.grey.shade700,),
+                       Container(
+                         padding: EdgeInsets.only(top: 2, right: 8),
+                            child: Icon(Icons.keyboard_control_rounded, size: 35, color: Colors.grey.shade700,),
                       )
                     ],
                   ),
                 );
               }),
+
       ],
 
     );

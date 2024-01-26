@@ -16,6 +16,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: Stack(
         children: [
+          // Список персонажей
           Column(
             children: [
               // Шапка
@@ -72,28 +73,33 @@ class _MainPageState extends State<MainPage> {
                     ),
                   )
               ),
-              // Основной контент
-              MainPageBody(),
+              // Основной контент(лист персонажей)
+              Expanded(
+                  child: SingleChildScrollView(
+                    child: MainPageBody(),
+                  )
+              ),
             ],
           ),
           // Кнопка добавления персонажа
           Positioned(
-            top: 0,
+            right: 20,
+            bottom: 125,
             child: Container(
               width: 60,
               height: 60,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(40),
                 color: Colors.red,
               ),
               child: Center(
-                child: Icon(
-                  CupertinoIcons.plus_circle_fill,
-                  color: Colors.white,
-                  size: 45,
-                ),
+              child: Icon(
+                CupertinoIcons.plus_circle_fill,
+                color: Colors.white,
+                size: 45,
               ),
             ),
+          ),
           )
         ],
       ),

@@ -87,7 +87,7 @@ class _MainPageBodyState extends State<MainPageBody> {
                                 Row(
                                   children: [
                                     Icon(
-                                      CupertinoIcons.suit_heart_fill,
+                                      Icons.favorite,
                                       color: Colors.red.shade400,
                                     ),
                                     Text(

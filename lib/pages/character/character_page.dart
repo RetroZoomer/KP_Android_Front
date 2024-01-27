@@ -1,3 +1,4 @@
+import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -11,12 +12,13 @@ class CharacterPage extends StatefulWidget {
 }
 
 class _CharacterPageState extends State<CharacterPage> {
+  PageController pageController = PageController(viewportFraction: 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          // Верхняя инфа
+          // Основная инфа
           Column(
             children: [
               //Инфа о перс.
@@ -211,20 +213,30 @@ class _CharacterPageState extends State<CharacterPage> {
                   ],
                 ),
               ),
-              // Модули
-              Container(
-                color: Colors.blue,
-                height: 450,
+              // Модули (Слайдер)
+              Expanded(
+                child: PageView.builder(
+                    controller: pageController,
+                    itemCount: 6,
+                    // allowImplicitScrolling: true,
+                    itemBuilder: (context, position) {
+                  return _buildPageItem(position);
+                }),
+              ),
+              // Навигация
+              SizedBox(
+                height: 100,
               )
             ],
           ),
           // История бросков
           Positioned(
               right: 0.1,
-              bottom: 195,
+              bottom: 125,
               child: Container(
                   width: 250,
                   height: 250,
+                  //todo Посмотреть начет кликабельности. Тк нужно убрать кликабельность списка после очистки
                   child: ListView.builder(
                       physics: AlwaysScrollableScrollPhysics(),
                       shrinkWrap: true,
@@ -290,7 +302,7 @@ class _CharacterPageState extends State<CharacterPage> {
           // Кнопка скрытия истории
           Positioned(
             right: 260,
-            bottom: 200,
+            bottom: 125,
             child: Opacity(
               opacity: 0.1,
               child: Container(
@@ -327,27 +339,319 @@ class _CharacterPageState extends State<CharacterPage> {
             ),
           ),
           // Выбор модуля
-          Positioned(
-            right: 20,
-            bottom: 125,
-            child: Container(
-              width: 60,
-              height: 60,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40),
-                color: Colors.red,
-              ),
-              child: Center(
-                child: Icon(
-                  CupertinoIcons.circle_grid_3x3_fill,
-                  color: Colors.white,
-                  size: 35,
-                ),
-              ),
-            ),
-          )
+          // Positioned(
+          //   right: 20,
+          //   bottom: 125,
+          //   child: Container(
+          //     width: 60,
+          //     height: 60,
+          //     decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.circular(40),
+          //       color: Colors.red,
+          //     ),
+          //     child: Center(
+          //       child: Icon(
+          //         CupertinoIcons.circle_grid_3x3_fill,
+          //         color: Colors.white,
+          //         size: 35,
+          //       ),
+          //     ),
+          //   ),
+          // )
         ],
       ),
+    );
+  }
+
+  Widget _buildPageItem(int index) {
+    return SingleChildScrollView(
+      child: Container(
+        margin: EdgeInsets.only(left: 10, right: 10),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+            // color: Colors.red.shade500,
+            border: Border.all(
+              style: BorderStyle.solid,
+              width: 1.0,
+              color: Colors.grey.shade400,
+            )
+        ),
+        child: Stack(
+          children: [
+            Column(
+              children: [
+                // Сила
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(right: 10),
+                              child: Text(
+                                  "СИЛА",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                height: 1,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                  "15",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15,),
+                // Ловкость
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(right: 10),
+                              child: Text(
+                                  "ЛОВКОСТЬ",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                height: 1,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                  "15",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15,),
+                // ТЕЛОСЛОЖЕНИЕ
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(right: 10),
+                              child: Text(
+                                  "ТЕЛОСЛОЖЕНИЕ",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                height: 1,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                  "15",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15,),
+                // ИНТЕЛЛЕКТ
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(right: 10),
+                              child: Text(
+                                  "ИНТЕЛЛЕКТ",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                height: 1,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                  "15",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15,),
+                // МУДРОСТЬ
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(right: 10),
+                              child: Text(
+                                  "МУДРОСТЬ",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                height: 1,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                  "15",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15,),
+                // ХАРИЗМА
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(right: 10),
+                              child: Text(
+                                  "ХАРИЗМА",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                height: 1,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                  "15",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  )
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            // Рамка(страница)
+
+          ],
+        ),
+      ),
+
+
     );
   }
 }

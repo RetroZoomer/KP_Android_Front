@@ -423,7 +423,137 @@ class _CharacterPageState extends State<CharacterPage> {
                     ],
                   ),
                 ),
+                // Броски и спасброскик
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                            decoration: BoxDecoration(
+                                border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                    left: BorderSide(color: Colors.grey.shade400),
+                                    bottom: BorderSide(color: Colors.grey.shade400)
+                                ),
+                                borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                            ),
+                            child: Text("Проверка"),
+                          ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 2),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Expanded(
+                                child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Навыки
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Атлетика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 15,),
+
                 // Ловкость
                 Container(
                   padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
@@ -467,7 +597,233 @@ class _CharacterPageState extends State<CharacterPage> {
                     ],
                   ),
                 ),
+                // Броски и спасброскик
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Text("Проверка"),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 2),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Expanded(
+                                child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Навыки
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Акробатика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Атлетика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Атлетика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 15,),
+
                 // ТЕЛОСЛОЖЕНИЕ
                 Container(
                   padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
@@ -508,6 +864,135 @@ class _CharacterPageState extends State<CharacterPage> {
                           ],
                         ),
                       )
+                    ],
+                  ),
+                ),
+                // Броски и спасброскик
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Text("Проверка"),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 2),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Expanded(
+                                child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Навыки
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Атлетика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -555,6 +1040,135 @@ class _CharacterPageState extends State<CharacterPage> {
                     ],
                   ),
                 ),
+                // Броски и спасброскик
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Text("Проверка"),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 2),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Expanded(
+                                child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Навыки
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Атлетика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 15,),
                 // МУДРОСТЬ
                 Container(
@@ -599,6 +1213,135 @@ class _CharacterPageState extends State<CharacterPage> {
                     ],
                   ),
                 ),
+                // Броски и спасброскик
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Text("Проверка"),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 2),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Expanded(
+                                child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Навыки
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Атлетика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 15,),
                 // ХАРИЗМА
                 Container(
@@ -640,6 +1383,135 @@ class _CharacterPageState extends State<CharacterPage> {
                           ],
                         ),
                       )
+                    ],
+                  ),
+                ),
+                // Броски и спасброскик
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Text("Проверка"),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 15,),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 2),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Expanded(
+                                child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Навыки
+                Container(
+                  padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(color: Colors.grey.shade400),
+                                  left: BorderSide(color: Colors.grey.shade400),
+                                  bottom: BorderSide(color: Colors.grey.shade400)
+                              ),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade50,
+                                    border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                                    borderRadius: BorderRadius.all(Radius.circular(45))
+                                ),
+                              ),
+                              Text("Атлетика")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade50,
+                            border: Border.all(style: BorderStyle.solid, width: 1, color: Colors.grey.shade400,),
+                            borderRadius: BorderRadius.all(Radius.circular(5))
+                        ),
+                        child: Text(
+                          "+2",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),

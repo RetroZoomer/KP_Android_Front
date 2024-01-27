@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +16,7 @@ class _CharacterPageState extends State<CharacterPage> {
     return Scaffold(
       body: Stack(
         children: [
+          // Верхняя инфа
           Column(
             children: [
               //Инфа о перс.
@@ -209,7 +212,10 @@ class _CharacterPageState extends State<CharacterPage> {
                 ),
               ),
               // Модули
-
+              Container(
+                color: Colors.blue,
+                height: 450,
+              )
             ],
           ),
           // История бросков
@@ -220,52 +226,89 @@ class _CharacterPageState extends State<CharacterPage> {
                   width: 250,
                   height: 250,
                   child: ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: AlwaysScrollableScrollPhysics(),
                       shrinkWrap: true,
                       reverse: true,
                       itemCount: 5,
                       itemBuilder: (context, index) {
                         // Обертка
-                        return Container(
-                          padding: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Colors.grey.shade200,
-                              border: Border.all( 
-                                width: 1.0,
-                                style: BorderStyle.solid,
-                                color: Colors.grey.shade400,
-                              )
-                          ),
-                          margin: EdgeInsets.only(left: 20, right: 20, bottom: 20),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("БРОСОК"),
-                                  SizedBox(height: 2,),
-                                  Text("Суммирование"),
-                                  Text("Кол-во кубов")
-                                ],
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(top: 2, right: 8),
-                                child: Text(
-                                    "Результат",
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold
-                                    ),
+                        return Stack(
+                          children: [
+                            Opacity(
+                                opacity: 0.1,
+                              child: Container(
+                                padding: EdgeInsets.all(5),
+                                margin: EdgeInsets.only( right: 20, bottom: 5),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: Colors.grey.shade200,
+                                    border: Border.all(
+                                      width: 1.0,
+                                      style: BorderStyle.solid,
+                                      color: Colors.grey.shade400,
+                                    )
                                 ),
-                              )
-                            ],
-                          ),
+                                child: Stack(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        // Основные чилса
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text("БРОСОК"),
+                                            SizedBox(height: 2,),
+                                            Text("Суммирование"),
+                                            Text("Кол-во кубов")
+                                          ],
+                                        ),
+                                        // Результат
+                                        Container(
+                                          padding: EdgeInsets.only(top: 2, right: 8),
+                                          child: Text(
+                                            "Результат",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         );
                       })
               ),
+          ),
+          // Кнопка скрытия истории
+          Positioned(
+            right: 260,
+            bottom: 200,
+            child: Opacity(
+              opacity: 0.1,
+              child: Container(
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  color: Colors.grey.shade200,
+                ),
+                child: Center(
+                  child: Icon(
+                    CupertinoIcons.xmark,
+                    color: Colors.black,
+                    size: 15,
+                  ),
+                ),
+              ),
+            ),
           ),
           // Кубы
           Positioned(
@@ -280,11 +323,6 @@ class _CharacterPageState extends State<CharacterPage> {
               ),
               child: Center(
                 child: Image.asset("assets/images/dice-twenty.png", width: 45,)
-                // Icon(
-                //   CupertinoIcons.plus_circle_fill,
-                //   color: Colors.white,
-                //   size: 45,
-                // ),
               ),
             ),
           ),

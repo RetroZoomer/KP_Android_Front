@@ -4,8 +4,15 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'character_notes.dart';
+import 'character_spells.dart';
+import 'goals_and_objectives.dart';
+import 'character_additional_abilities.dart';
 import 'character_attacks_and_skills.dart';
+import 'character_equipment_and_treasures.dart';
+import 'character_personality_and_appearance.dart';
 import 'chracter_characteristics_and_skills.dart';
+import 'chracter_passive_feelings_and_possessions.dart';
 
 class CharacterPage extends StatefulWidget {
   const CharacterPage({super.key});
@@ -243,7 +250,6 @@ class _CharacterPageState extends State<CharacterPage> {
                   child: ListView.builder(
                       physics: AlwaysScrollableScrollPhysics(),
                       shrinkWrap: true,
-                      reverse: true,
                       itemCount: 5,
                       itemBuilder: (context, index) {
                         // Обертка
@@ -380,8 +386,16 @@ class _CharacterPageState extends State<CharacterPage> {
             )
         ),
         child:
-        // CharacteristicsAndSkills()
-        AttacksAndSkills()
+        CharacteristicsAndSkills()
+        // todo Сделать функцию скрытия окна
+        //AttacksAndSkills()
+        //AdditionalAbilities()
+        //EquipmentAndTreasures()
+        //PassiveFeelingsAndPossessions()
+        //PersonalityAndAppearance()
+        //GoalsAndObjectives()
+        //Notes()
+        //Spells()
         )
 
 

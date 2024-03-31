@@ -15,7 +15,7 @@ class _DefiniteDiceRollState extends State<DefiniteDiceRoll> {
   late String text;
   late int maxValue;
   late String picture;
-  late int value;
+  int value = 0;
 
   @override
   void initState() {
@@ -23,37 +23,56 @@ class _DefiniteDiceRollState extends State<DefiniteDiceRoll> {
     text = widget.text;
     maxValue = widget.maxValue;
     picture = widget.picture;
-    value = 0;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 60,
-      height: 60,
-      margin: EdgeInsets.only(top: 5, left: 5),
-      padding: EdgeInsets.all(3),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(40),
-        color: Colors.red,
-      ),
-      child: Column(
-        children: [
-          Expanded(
-            child:
-              Image(
-                image: AssetImage(
-                    picture as String
-                )
-              ),
-          ),
-          Text(
-            text,
-            style: TextStyle(
-              color: Colors.white
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          value++;
+        });
+      },
+      onLongPress: () {
+        setState(() {
+          value--;
+        });
+      },
+      child: Container(
+        width: 60,
+        height: 60,
+        margin: EdgeInsets.only(top: 5, left: 5),
+        padding: EdgeInsets.all(3),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.red,
+        ),
+        child: Column(
+          children: [
+            Expanded(
+              child:
+                Image(
+                  image: AssetImage(
+                      "$picture"
+                  )
+                ),
             ),
-          )
-        ],
+            value>0?
+            Text(
+              "$value",
+              style: TextStyle(
+                  color: Colors.white
+              ),
+            )
+                :
+            Text(
+              text,
+              style: TextStyle(
+                color: Colors.white
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

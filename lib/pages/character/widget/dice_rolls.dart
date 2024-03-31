@@ -12,7 +12,6 @@ class DiceRolls extends StatefulWidget {
 
 class _DiceRollsState extends State<DiceRolls> {
   late bool isDicesVisible;
-  late int value;
   @override
   void initState() {
     super.initState();
@@ -38,14 +37,8 @@ class _DiceRollsState extends State<DiceRolls> {
                     children: [
                       DefiniteDiceRoll(text: 'к8', maxValue: 8, picture: 'assets/images/dice-d8-logotic.png'),
                       DefiniteDiceRoll(text: 'к6', maxValue: 6, picture: 'assets/images/dice-d6-logotic.png'),
-                      GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              value += value;
-                            });
-                          },
-                          child: DefiniteDiceRoll(text: 'к4', maxValue: 4, picture: 'assets/images/dice-d4-logotic.png')
-                      ),
+                      DefiniteDiceRoll(text: 'к4', maxValue: 4, picture: 'assets/images/dice-d4-logotic.png'),
+
 
                       Container(
                         width: 60,
@@ -67,7 +60,6 @@ class _DiceRollsState extends State<DiceRolls> {
                       DefiniteDiceRoll(text: 'к20', maxValue: 20, picture: 'assets/images/dice-d20-logotic.png'),
                       DefiniteDiceRoll(text: 'к12', maxValue: 12, picture: 'assets/images/dice-d12-logotic.png'),
                       DefiniteDiceRoll(text: 'к10', maxValue: 10, picture: 'assets/images/dice-d10-logotic.png'),
-
                     ],
                   ),
                 ],

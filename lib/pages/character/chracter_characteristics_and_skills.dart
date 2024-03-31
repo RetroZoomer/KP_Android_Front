@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kp_android/pages/character/widget/character_characterisitcs.dart';
 
 class CharacteristicsAndSkills extends StatefulWidget {
   const CharacteristicsAndSkills({super.key});
@@ -16,48 +17,7 @@ class _CharacteristicsAndSkillsState extends State<CharacteristicsAndSkills> {
         Column(
           children: [
             // Сила
-            Container(
-              padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
-              child: Column(
-                children: [
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: Text(
-                              "СИЛА",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                            height: 1,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text(
-                              "15",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+            CharacterCharacterisics(characteristicName: "СИЛА", value: 15),
             // Броски и спасброскик
             Container(
               padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
@@ -91,7 +51,9 @@ class _CharacteristicsAndSkillsState extends State<CharacteristicsAndSkills> {
                       ),
                     ),
                   ),
+                  
                   SizedBox(width: 15,),
+
                   Expanded(
                     child: Container(
                       padding: EdgeInsets.only(left: 5, top: 5, right: 5, bottom: 5),
@@ -190,48 +152,7 @@ class _CharacteristicsAndSkillsState extends State<CharacteristicsAndSkills> {
             SizedBox(height: 15,),
 
             // Ловкость
-            Container(
-              padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
-              child: Column(
-                children: [
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: Text(
-                              "ЛОВКОСТЬ",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                            height: 1,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text(
-                              "15",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+            CharacterCharacterisics(characteristicName: "ЛОВКОСТЬ", value: 15),
             // Броски и спасброскик
             Container(
               padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
@@ -460,48 +381,7 @@ class _CharacteristicsAndSkillsState extends State<CharacteristicsAndSkills> {
             SizedBox(height: 15,),
 
             // ТЕЛОСЛОЖЕНИЕ
-            Container(
-              padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
-              child: Column(
-                children: [
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: Text(
-                              "ТЕЛОСЛОЖЕНИЕ",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                            height: 1,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text(
-                              "15",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+            CharacterCharacterisics(characteristicName: "ТЕЛОСЛОЖЕНИЕ", value: 15),
             // Броски и спасброскик
             Container(
               padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
@@ -585,48 +465,7 @@ class _CharacteristicsAndSkillsState extends State<CharacteristicsAndSkills> {
             SizedBox(height: 15,),
 
             // ИНТЕЛЛЕКТ
-            Container(
-              padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
-              child: Column(
-                children: [
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: Text(
-                              "ИНТЕЛЛЕКТ",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                            height: 1,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text(
-                              "15",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+            CharacterCharacterisics(characteristicName: "ИНТЕЛЛЕКТ", value: 15),
             // Броски и спасброскик
             Container(
               padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
@@ -951,48 +790,7 @@ class _CharacteristicsAndSkillsState extends State<CharacteristicsAndSkills> {
             SizedBox(height: 15,),
 
             // МУДРОСТЬ
-            Container(
-              padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
-              child: Column(
-                children: [
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: Text(
-                              "МУДРОСТЬ",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                            height: 1,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text(
-                              "15",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+            CharacterCharacterisics(characteristicName: "МУДРОСТЬ", value: 15),
             // Броски и спасброскик
             Container(
               padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),
@@ -1317,48 +1115,7 @@ class _CharacteristicsAndSkillsState extends State<CharacteristicsAndSkills> {
             SizedBox(height: 15,),
 
             // ХАРИЗМА
-            Container(
-              padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 5),
-              child: Column(
-                children: [
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: Text(
-                              "ХАРИЗМА",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                            height: 1,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text(
-                              "15",
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              )
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+            CharacterCharacterisics(characteristicName: "ХАРИЗМА", value: 15),
             // Броски и спасброскик
             Container(
               padding: EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 5),

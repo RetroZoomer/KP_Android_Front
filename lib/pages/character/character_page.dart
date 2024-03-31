@@ -286,7 +286,6 @@ class _CharacterPageState extends State<CharacterPage> {
         ),
         child:
         CharacteristicsAndSkills()
-        // todo Сделать функцию скрытия окна
         //AttacksAndSkills()
         //AdditionalAbilities()
         //EquipmentAndTreasures()

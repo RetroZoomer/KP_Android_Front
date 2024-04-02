@@ -6,6 +6,8 @@ class User {
   late List<CharacterModel> _characters;
   late List<Authorities> _authorities;
 
+  int? get id => _id;
+
   List<CharacterModel> get characters => _characters;
 
   User(
@@ -21,6 +23,11 @@ class User {
       _roles = roles;
       _characters = characters;
       _authorities = authorities;
+  }
+
+  User.from(
+      {required id}) {
+    _id = id;
   }
 
   User.fromJson(Map<String, dynamic> json) {
@@ -64,6 +71,7 @@ class CharacterModel {
   int? id;
   String? name;
   String? race;
+  int? level;
   String? nameClass;
   String? img;
   int? speed;
@@ -137,6 +145,7 @@ class CharacterModel {
         this.nameClass,
         this.img,
         this.speed,
+        this.level,
         this.initiative,
         this.inspiration,
         this.proficiency,
@@ -204,6 +213,7 @@ class CharacterModel {
     id = json['id'];
     name = json['name'];
     race = json['race'];
+    level = json['level'];
     nameClass = json['nameClass'];
     img = json['img'];
     speed = json['speed'];

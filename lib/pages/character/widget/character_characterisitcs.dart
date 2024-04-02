@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CharacterCharacterisics extends StatefulWidget {
   final String characteristicName;
-  final int value;
+  final String value;
   const CharacterCharacterisics({super.key, required this.characteristicName, required this.value});
 
   @override
@@ -12,7 +12,7 @@ class CharacterCharacterisics extends StatefulWidget {
 
 class _CharacterCharacterisicsState extends State<CharacterCharacterisics> {
   late String characteristicName;
-  late int value;
+  late String value;
 
   @override
   void initState() {

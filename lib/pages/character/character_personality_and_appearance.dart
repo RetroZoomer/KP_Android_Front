@@ -18,10 +18,10 @@ class _PersonalityAndAppearanceState extends State<PersonalityAndAppearance> {
           child: Column(
             children: [
               ExtandableTextWidget(header: "Предыстория персонажа", text: ""),
-              ExtandableTextWidget(header: "Черты характера", text: ""),
-              ExtandableTextWidget(header: "Идеалы", text: ""),
-              ExtandableTextWidget(header: "Привязанности", text: ""),
-              ExtandableTextWidget(header: "Слабости", text: ""),
+              // ExtandableTextWidget(header: "Черты характера", text: ""),
+              // ExtandableTextWidget(header: "Идеалы", text: ""),
+              // ExtandableTextWidget(header: "Привязанности", text: ""),
+              // ExtandableTextWidget(header: "Слабости", text: ""),
             ],
           ),
         )

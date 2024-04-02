@@ -17,12 +17,7 @@ class _NotesState extends State<Notes> {
           padding: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 10),
           child: Column(
             children: [
-              ExtandableTextWidget(header: "Заметки", text: ""),
-              ExtandableTextWidget(header: "Заметки", text: ""),
-              ExtandableTextWidget(header: "Заметки", text: ""),
-              ExtandableTextWidget(header: "Заметки", text: ""),
-              ExtandableTextWidget(header: "Заметки", text: ""),
-              ExtandableTextWidget(header: "Заметки", text: ""),
+              ExtandableTextWidget(header: "Заметки 1", text: ""),
             ],
           ),
         )

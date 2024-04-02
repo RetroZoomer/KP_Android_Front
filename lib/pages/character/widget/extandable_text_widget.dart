@@ -78,13 +78,6 @@ class _ExtandableTextWidgetState extends State<ExtandableTextWidget> {
                           Text(
                               text
                           ),
-                          Align(
-                            alignment: Alignment.bottomRight,
-                            child: Icon(
-                              Icons.edit_note,
-                              size: 25,
-                            ),
-                          )
                         ],
                       ),
                     )

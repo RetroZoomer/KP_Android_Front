@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Adventure story',
 
-      home: CharacterPageEditing(pageId: 0,),
-      // home: SignInPage(),
+      // home: CharacterPageEditing(pageId: 0,),
+      home: SignInPage(),
       initialRoute: RouteHelper.initial,
       getPages: RouteHelper.routes,
     );

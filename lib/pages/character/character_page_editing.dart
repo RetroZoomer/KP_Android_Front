@@ -258,6 +258,103 @@ class _CharacterPageEditingState extends State<CharacterPageEditing> {
               ),
               SizedBox(height: 20,),
 
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                        "СИЛА: " + character.strength.toString(),
+                        style: TextStyle(fontSize: 16)
+                    )
+                  ]
+              ),
+              Container(
+                child: TextField(
+                  controller: realHpController,
+                  decoration: InputDecoration(
+                    hintText: "Сила",
+                  ),
+                  keyboardType: TextInputType.number,
+                ),
+              ),
+              SizedBox(height: 20,),
+
+              Row(
+                children: [
+                  Checkbox(
+                    value: character.strengthSav,
+                    activeColor: Colors.red,
+                    shape: CircleBorder(),
+                    onChanged: (newBool) {
+                      setState(() {
+                      character.strengthSav = newBool;
+                      });
+                    }
+                  ),
+                  Expanded(
+                    child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                  )
+                ],
+              ),
+              SizedBox(height: 10,),
+
+              Row(
+                children: [
+                  Checkbox(
+                      value: character.athletics,
+                      activeColor: Colors.red,
+                      shape: CircleBorder(),
+                      onChanged: (newBool) {
+                        setState(() {
+                          character.athletics = newBool;
+                        });
+                      }
+                  ),
+                  Expanded(
+                    child: Text("Атлетика", overflow: TextOverflow.ellipsis,),
+                  )
+                ],
+              ),
+              SizedBox(height: 20,),
+
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                        "ЛОВКОСТЬ: " + character.dexterity.toString(),
+                        style: TextStyle(fontSize: 16)
+                    )
+                  ]
+              ),
+              Container(
+                child: TextField(
+                  controller: realHpController,
+                  decoration: InputDecoration(
+                    hintText: "Ловкость",
+                  ),
+                  keyboardType: TextInputType.number,
+                ),
+              ),
+              SizedBox(height: 20,),
+
+              Row(
+                children: [
+                  Checkbox(
+                      value: character.strengthSav,
+                      activeColor: Colors.red,
+                      shape: CircleBorder(),
+                      onChanged: (newBool) {
+                        setState(() {
+                          character.strengthSav = newBool;
+                        });
+                      }
+                  ),
+                  Expanded(
+                    child: Text("Спасбросок", overflow: TextOverflow.ellipsis,),
+                  )
+                ],
+              ),
+              SizedBox(height: 20,),
+
               // Container(
               //   margin: EdgeInsets.only(left: 40, right: 40),
               //   child: TextField(

@@ -73,6 +73,7 @@ class SignInPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 40, right: 40),
               child: TextField(
+                obscureText: true,
                 controller: passwordController,
                 decoration: InputDecoration(
                   hintText: "Password",

@@ -1901,16 +1901,14 @@ class _CharacterPageState extends State<CharacterPage> {
 
                 ),
               ),
-              // Навигация
+              // Навигация (Которой нет)
               SizedBox(
                 height: 10,
               )
             ],
           ),
-          // История бросков
-          // HistoryOfThrows(),
           // Кубы
-          // DiceRolls(),
+          DiceRolls(),
           Positioned (
             right: 20,
             bottom: 125,

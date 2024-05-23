@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:kp_android/pages/Initiative/initiative_page.dart';
 import 'package:kp_android/pages/auth/sign_up_page.dart';
 import 'package:kp_android/pages/character/character_page.dart';
 import 'package:kp_android/pages/home/main_page.dart';
@@ -12,11 +13,12 @@ class RouteHelper {
   static const String EditMyCharacter = "/character/edit";
   static const String SignUp = "/signUp";
   static const String SignIn = "/signIn";
+  static const String Initiative = "/initiative";
 
   static String getInitial() => '$initial';
   static String getMyCharacter(int? pageId) => '$MyCharacter?pageId=$pageId';
   static String getEditMyCharacter(int? pageId) => '$EditMyCharacter?pageId=$pageId';
-
+  static String getInitiative() => '$Initiative';
 
   static String getSignUp() => '$SignUp';
   static String getSignIn() => '$SignIn';
@@ -39,6 +41,8 @@ class RouteHelper {
     ),
 
     GetPage(name: SignUp, page: () => SignUpPage()),
-    GetPage(name: SignIn, page: () => SignInPage())
+    GetPage(name: SignIn, page: () => SignInPage()),
+
+    GetPage(name: Initiative, page: () => InitiativePage())
   ];
 }

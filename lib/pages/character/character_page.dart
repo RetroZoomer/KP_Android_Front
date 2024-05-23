@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:kp_android/pages/character/widget/character_characterisitcs.dart';
+import 'package:kp_android/pages/character/widget/dice_rolls.dart';
 import 'package:kp_android/pages/character/widget/extandable_text_widget.dart';
 import 'package:kp_android/routes/route_helper.dart';
 
@@ -70,7 +71,7 @@ class _CharacterPageState extends State<CharacterPage> {
                       },
                       child: Container(
                         padding: EdgeInsets.only(top: 25),
-                        child: Icon(Icons.arrow_back),
+                        child: Icon(Icons.arrow_back, size: 35),
                       ),
                     ),
                     Row(
@@ -1914,7 +1915,6 @@ class _CharacterPageState extends State<CharacterPage> {
             bottom: 125,
             child: GestureDetector(
                 onTap: (){
-                  print(character.id);
                 Get.toNamed(RouteHelper.getEditMyCharacter(widget.pageId));
               },
               child: Container(

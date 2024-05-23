@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kp_android/controllers/my_characters_controller.dart';
-import 'package:kp_android/models/user_model.dart';
 import 'package:kp_android/pages/auth/sign_in_page.dart';
-import 'package:kp_android/pages/character/character_page.dart';
-import 'package:kp_android/pages/character/character_page_editing.dart';
-import 'package:kp_android/pages/home/main_page.dart';
 import 'package:kp_android/routes/route_helper.dart';
 import 'helper/dependencies.dart' as dep;
 
@@ -26,7 +21,7 @@ class MyApp extends StatelessWidget {
 
       // home: CharacterPageEditing(pageId: 0,),
       home: SignInPage(),
-      initialRoute: RouteHelper.initial,
+      initialRoute: RouteHelper.SignIn,
       getPages: RouteHelper.routes,
     );
   }

@@ -70,11 +70,6 @@ class _MainPageBodyState extends State<MainPageBody> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: Colors.red,
-                              // image: DecorationImage(
-                              //     image: AssetImage(
-                              //         "assets/images/person.png"
-                              //     )
-                              // )
                             ),
                             child: Icon(Icons.person_outline_outlined, color: Colors.white, size: 70,),
                           ),
@@ -147,70 +142,25 @@ class _MainPageBodyState extends State<MainPageBody> {
                                   _deleteCharacter(characters.myCharacterList[position].id!);
                                 },
                                 child: Container(
+                                  width: 50,
+                                  height: 40,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Colors.grey.shade300,
-                                      border: Border.all(
-                                        width: 1.0,
-                                        style: BorderStyle.solid,
-                                        color: Colors.grey.shade400,
-                                      )
+                                    borderRadius: BorderRadius.only(topLeft: Radius.zero, topRight: Radius.circular(20), bottomLeft: Radius.circular(20)),
+                                    color: Colors.red.shade400,
                                   ),
-                                  padding: EdgeInsets.all(5),
-                                  margin: EdgeInsets.only(right: 10, top: 40, bottom: 10),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                  // padding: EdgeInsets.only(top: 1, bottom: 1, left: 10, right: 10),
+                                  // margin: EdgeInsets.only(right: 10, top: 10),
+                                  child: Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      // Text("Изменить"),
-                                      // Divider(
-                                      //   color: Colors.black,
-                                      // ),
-                                      Text("Удалить"),
+                                      Icon(CupertinoIcons.minus, color: Colors.white, size: 25,)
                                     ],
                                   ),
                                 ),
                               )
                             ],
                           ),
-                          //   Column(
-                          //     mainAxisAlignment: MainAxisAlignment.end,
-                          //     crossAxisAlignment: CrossAxisAlignment.end,
-                          //     children: [
-                          //       Container(
-                          //         padding: EdgeInsets.only(top: 2, right: 8),
-                          //         child: Icon(Icons.keyboard_control_rounded, size: 35, color: Colors.grey.shade700,),
-                          //       ),
-                          //       Container(
-                          //         decoration: BoxDecoration(
-                          //             borderRadius: BorderRadius.circular(10),
-                          //             color: Colors.grey.shade300,
-                          //             border: Border.all(
-                          //               width: 1.0,
-                          //               style: BorderStyle.solid,
-                          //               color: Colors.grey.shade400,
-                          //             )
-                          //         ),
-                          //         padding: EdgeInsets.all(5),
-                          //         margin: EdgeInsets.only(right: 5),
-                          //         child: Column(
-                          //           children: [
-                          //             // Text("Изменить"),
-                          //             // Divider(
-                          //             //   color: Colors.black,
-                          //             // ),
-                          //             Text("Удалить"),
-                          //           ],
-                          //         ),
-                          //       )
-                          //     ],
-                          //   )
-                          //       :
-                          //   Container(
-                          //     padding: EdgeInsets.only(top: 2, right: 8),
-                          //     child: Icon(Icons.keyboard_control_rounded, size: 35, color: Colors.grey.shade700,),
-                          //   ),
-                          // )
                         ],
                       ),
                     ),

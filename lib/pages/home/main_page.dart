@@ -125,6 +125,31 @@ class _MainPageState extends State<MainPage> {
               ),
                         ),
             ),
+          ),
+          // Кнопка к инициативе
+          Positioned(
+            left: 20,
+            bottom: 125,
+            child: GestureDetector(
+              onTap: () {
+                Get.toNamed(RouteHelper.getInitiative());
+              },
+              child: Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  color: Colors.red,
+                ),
+                child: Center(
+                  child: Icon(
+                    CupertinoIcons.list_bullet,
+                    color: Colors.white,
+                    size: 35,
+                  ),
+                ),
+              ),
+            ),
           )
         ],
       ),
